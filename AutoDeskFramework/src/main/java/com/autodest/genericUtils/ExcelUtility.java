@@ -23,8 +23,8 @@ public class ExcelUtility {
     * @return
     * @throws Throwable
     */
-	public String getExcelData(String filePath ,String shettName , int rowNum , int colNum) throws Throwable {
-		FileInputStream fis = new FileInputStream(filePath);
+	public String getExcelData(String shettName , int rowNum , int colNum) throws Throwable {
+		FileInputStream fis = new FileInputStream(IConstant.excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(shettName);
 		Row row = sh.getRow(rowNum);
@@ -32,6 +32,51 @@ public class ExcelUtility {
 		return row.getCell(colNum).getStringCellValue();
 				
 	}
+	
+	/**
+	 * used to read the data from excel workbook based on testId & ColumnHeader
+	 * @param sheetName
+	 * @param expTestID
+	 * @param expColHEader
+	 * @return
+	 * @throws Throwable
+	 */
+	public String getExcelData(String sheetName , String expTestID , String expColHEader) throws Throwable {
+		
+				int expTestRow = 0;
+				int expHeader = 0;
+				FileInputStream fis = new FileInputStream(IConstant.excelFilePath);
+				Workbook wb = WorkbookFactory.create(fis);
+				Sheet sh = wb.getSheet(sheetName);
+				int rowCount = sh.getLastRowNum();
+			    
+		    for(int i=0; i<rowCount ; i++) {		
+				Row row = sh.getRow(i);
+				String zeroColData= row.getCell(0).getStringCellValue();
+		        if(expTestID.contentEquals(zeroColData)) {
+		        	//System.out.println("test is availbale");
+		        	expTestRow = i;
+		        	break;
+		        }
+		    }
+		    
+		    int expColHeader = expTestRow-1;
+		    
+		        int colCount = sh.getRow(expColHeader).getLastCellNum();
+		         for(int j=0 ; j <colCount ; j++) {
+		        	   String actColHeader = sh.getRow(expColHeader).getCell(j).getStringCellValue();
+		        	   if(actColHeader.equals(expColHEader)) {
+		        		        //System.out.println("header is avibale ");
+		        		        expHeader = j;
+		        		        break;
+		        	   }
+		         }
+		         
+      return sh.getRow(expTestRow).getCell(expHeader).getStringCellValue();
+				
+	}
+	
+	
 	/**
 	 * used to set data back to excel based on parameter
 	 * @param shettName
@@ -41,14 +86,14 @@ public class ExcelUtility {
 	 * @throws Throwable
 	 */
 	
-	public void setExcelData(String filePath, String shettName , int rowNum , int colNum ,String data) throws Throwable {
-		FileInputStream fis = new FileInputStream(filePath);
+	public void setExcelData(String shettName , int rowNum , int colNum ,String data) throws Throwable {
+		FileInputStream fis = new FileInputStream(IConstant.excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(shettName);
 		Row row = sh.getRow(rowNum);
 		Cell cel = row.createCell(colNum);
 		cel.setCellValue(data);
-		FileOutputStream fos = new FileOutputStream(filePath);
+		FileOutputStream fos = new FileOutputStream(IConstant.excelFilePath);
 				wb.write(fos);
 		wb.close();
 	}
@@ -58,14 +103,17 @@ public class ExcelUtility {
 	 * @return
 	 * @throws Throwable
 	 */
-	public int getRowCount(String filePath, String shettName)throws Throwable {
-		FileInputStream fis = new FileInputStream(filePath);
+	public int getRowCount(String shettName)throws Throwable {
+		FileInputStream fis = new FileInputStream(IConstant.excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(shettName);
 	
 		return sh.getLastRowNum();
 				
 	}
+	
+	
+	
 	
 }
 
