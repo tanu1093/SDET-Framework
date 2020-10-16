@@ -28,7 +28,7 @@ public class CreateNewConatct extends WebDriverUtility{
 	@FindBy(xpath = "//input[@title='Save [Alt+S]']")
 	private WebElement saveBtn;
 	
-	public  void createConatctWithOrgName(String lastName , String orgName , String serachDropOtp) {
+	public  void createConatct(String lastName , String orgName , String serachDropOtp) {
 		lastNameEdt.sendKeys(lastName);
 		organizationLookUpImage.click();
 		//swicth to Child
@@ -40,6 +40,11 @@ public class CreateNewConatct extends WebDriverUtility{
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
 		//swict to Parent
 		switchToBrowser(driver, "Contacts");
+		saveBtn.click();
+	}
+	
+	public void createContact(String lastName) {
+		lastNameEdt.sendKeys(lastName);
 		saveBtn.click();
 	}
 }

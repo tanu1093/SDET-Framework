@@ -5,8 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Home {
-	public Home(WebDriver driver) {             
+import com.autodest.genericUtils.WebDriverUtility;
+
+public class Home  extends WebDriverUtility{
+	WebDriver driver;
+	public Home(WebDriver driver) {     
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -41,6 +45,10 @@ public class Home {
 		return leadsLnk;
 	}
 	
+	public void logout() {
+		moveToExpectedElemnet(driver, adminstrationImg);
+		signOutLnk.click();
+	}
 	
 	
 	

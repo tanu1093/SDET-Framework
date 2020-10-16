@@ -8,7 +8,7 @@
         <methods>
           <include name="configBS"/>
           <include name="configBC"/>
-                          <include name="createContactWithOrg"/>
+          <include name="createContactWithOrg"/>
           <include name="configBS1"/>
           <include name="configAC"/>
           <include name="configBM"/>

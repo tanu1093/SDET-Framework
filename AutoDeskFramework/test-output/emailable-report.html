@@ -8,11 +8,70 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">49,827</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test-Chrome</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">182,390</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Test-Firefox</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">229,887</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num attn">1</th><th class="num">412,277</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.autodesk.contacttest.CreateContactTest</td><td><a href="#m0">createContactWithOrg</a></td><td rowspan="1">1602764521252</td><td rowspan="1">49776</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test-Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.autodesk.contacttest.CreateContactTest</td><td><a href="#m0">createContactTest</a></td><td rowspan="1">1602845241201</td><td rowspan="1">29596</td></tr><tr class="passedeven"><td><a href="#m1">createContactWithOrg</a></td><td rowspan="1">1602845281315</td><td rowspan="1">52652</td></tr><tr class="passedodd"><td rowspan="2">com.autodest.organizationTest.CreateOrgTest</td><td><a href="#m2">createOrgTest</a></td><td rowspan="1">1602845351952</td><td rowspan="1">19514</td></tr><tr class="passedodd"><td><a href="#m3">createOrgWithIndustryTest</a></td><td rowspan="1">1602845377500</td><td rowspan="1">31602</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Test-Firefox &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.autodesk.contacttest.CreateContactTest</td><td><a href="#m4">configAM</a></td><td rowspan="1">1602845343135</td><td rowspan="1">20375</td></tr><tr><th colspan="4">Test-Firefox &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.autodesk.contacttest.CreateContactTest</td><td><a href="#m5">createContactWithOrg</a></td><td rowspan="1">1602845306441</td><td rowspan="1">36649</td></tr><tr><th colspan="4">Test-Firefox &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.autodesk.contacttest.CreateContactTest</td><td><a href="#m6">configAC</a></td><td rowspan="1">1602845363513</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test-Firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.autodesk.contacttest.CreateContactTest</td><td><a href="#m7">createContactTest</a></td><td rowspan="1">1602845273698</td><td rowspan="1">25483</td></tr><tr class="passedodd"><td rowspan="2">com.autodest.organizationTest.CreateOrgTest</td><td><a href="#m8">createOrgTest</a></td><td rowspan="1">1602845386617</td><td rowspan="1">26656</td></tr><tr class="passedodd"><td><a href="#m9">createOrgWithIndustryTest</a></td><td rowspan="1">1602845419817</td><td rowspan="1">23388</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.autodesk.contacttest.CreateContactTest#createContactWithOrg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test-Chrome</h2><h3 id="m0">com.autodesk.contacttest.CreateContactTest#createContactTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.autodesk.contacttest.CreateContactTest#createContactWithOrg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.autodest.organizationTest.CreateOrgTest#createOrgTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.autodest.organizationTest.CreateOrgTest#createOrgWithIndustryTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test-Firefox</h2><h3 id="m4">com.autodesk.contacttest.CreateContactTest#configAM</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: Sign Out
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TY-DEEPAK-TR&apos;, ip: &apos;192.168.1.152&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 4664, moz:profile: C:\Users\Deepak\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 61849b24-38ce-4115-829c-7749bc87b5b8
+*** Element info: {Using=link text, value=Sign Out}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at com.autodesk.pomrepositorylib.Home.logout(Home.java:50)
+	at com.autodest.genericUtils.BaseClass.configAM(BaseClass.java:76)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.autodesk.contacttest.CreateContactTest#createContactWithOrg</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.InvalidArgumentException: Expected &quot;handle&quot; to be a string, got [object Undefined] undefined
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TY-DEEPAK-TR&apos;, ip: &apos;192.168.1.152&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 4664, moz:profile: C:\Users\Deepak\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 61849b24-38ce-4115-829c-7749bc87b5b8
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
+	at com.autodest.genericUtils.WebDriverUtility.switchToBrowser(WebDriverUtility.java:105)
+	at com.autodesk.pomrepositorylib.CreateNewConatct.createConatct(CreateNewConatct.java:35)
+	at com.autodesk.contacttest.CreateContactTest.createContactWithOrg(CreateContactTest.java:90)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.autodesk.contacttest.CreateContactTest#configAC</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.autodesk.contacttest.CreateContactTest#createContactTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.autodest.organizationTest.CreateOrgTest#createOrgTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.autodest.organizationTest.CreateOrgTest#createOrgWithIndustryTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
